@@ -171,4 +171,10 @@ where !patternList.Any(t1 =>t.SimpleName.EndsWith(t1))
 
 select new { t, t.Methods }
 ]]></Query>
+  <Query Active="True" DisplayList="True" DisplayStat="False" DisplaySelectionView="False" IsCriticalRule="False"><![CDATA[// <Name>No static classes</Name>
+warnif count > 0 
+
+from t in JustMyCode.Types
+where t.IsStatic
+select t]]></Query>
 </Queries>

@@ -1,4 +1,5 @@
-﻿using DavidTielke.PMA.CrossCutting.DataClasses;
+﻿using Configuration;
+using DavidTielke.PMA.CrossCutting.DataClasses;
 using DavidTielke.PMA.Data.DataStoring;
 
 namespace DavidTielke.PMA.Logic.PersonManagement;
@@ -14,9 +15,14 @@ public class PersonValidator
 public class PersonManager : IPersonManager
 {
     private readonly IPersonRepository _repository;
+    private readonly IConfigurator _config;
+    private readonly int AGE_TRESHOLD;
 
-    public PersonManager(IPersonRepository repository)
+    public PersonManager(IPersonRepository repository,
+        IConfigurator config)
     {
+        _config = config;
+        AGE_TRESHOLD = _config.GetValue<int>("AgeTreshold");
         _repository = repository;
     }
 
@@ -24,13 +30,13 @@ public class PersonManager : IPersonManager
     {
         return _repository
             .Query()
-            .Where(p => p.Age >= 18);
+            .Where(p => p.Age >= AGE_TRESHOLD);
     }
 
     public IQueryable<Person> GetAllChildren()
     {
         return _repository
             .Query()
-            .Where(p => p.Age < 18);
+            .Where(p => p.Age < AGE_TRESHOLD);
     }
 }
