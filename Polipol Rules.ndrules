@@ -1,0 +1,174 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Queries>
+  <Query Active="True" DisplayList="True" DisplayStat="False" DisplaySelectionView="False" IsCriticalRule="False"><![CDATA[// <Name>Keine Klasse größer als 220 LOC</Name>
+warnif count > 0 
+from t in JustMyCode.Types
+where t.NbLinesOfCode > 2
+select new{t, t.NbLinesOfCode, Debt = 10.ToMinutes().ToDebt(), Severity = Severity.Critical}
+]]></Query>
+  <Query Active="True" DisplayList="True" DisplayStat="False" DisplaySelectionView="False" IsCriticalRule="False"><![CDATA[// <Name>Namensmuster Manager</Name>
+warnif count > 0 
+
+let patternName = "Manager"
+let allowedMethods = new string[]{"Add","Remove","Update"}
+let allowedPrefixes = new string[]{"Get","Is","Are"}
+
+let classBlacklist = new string[]{
+ "Program"
+}
+
+let patternClasses = JustMyCode.Types.Where(t => !t.IsGeneratedByCompiler)
+                                        .Where(t => !t.IsStatic)
+                                        .Where(t => !t.ParentNamespace.FullName.Contains("DataClasses"))
+                                        .Where(t => !classBlacklist.Any(cbl => cbl == t.SimpleName))
+                                        .Where(t => t.SimpleName.EndsWith(patternName))
+
+from t in patternClasses 
+
+let forbiddenMethods = t.Methods.Where(m => !allowedMethods.Any(am => m.SimpleName == am))
+                                .Where(m => !allowedPrefixes.Any(ap => m.SimpleName.StartsWith(ap)))
+
+where forbiddenMethods.Any()
+
+select new { t, forbiddenMethods }
+]]></Query>
+  <Query Active="True" DisplayList="True" DisplayStat="False" DisplaySelectionView="False" IsCriticalRule="False"><![CDATA[// <Name>Namensmuster Repository</Name>
+warnif count > 0 
+
+let patternName = "Repository"
+let allowedMethods = new string[]{"Insert","Delete","Update","Query"}
+let allowedPrefixes = new string[]{}
+
+let classBlacklist = new string[]{
+ "Program"
+}
+
+let patternClasses = JustMyCode.Types.Where(t => !t.IsGeneratedByCompiler)
+                                        .Where(t => !t.IsStatic)
+                                        .Where(t => !t.ParentNamespace.FullName.Contains("DataClasses"))
+                                        .Where(t => !classBlacklist.Any(cbl => cbl == t.SimpleName))
+                                        .Where(t => t.SimpleName.EndsWith(patternName))
+
+from t in patternClasses 
+
+let forbiddenMethods = t.Methods.Where(m => !allowedMethods.Any(am => m.SimpleName == am))
+                                .Where(m => !allowedPrefixes.Any(ap => m.SimpleName.StartsWith(ap)))
+
+where forbiddenMethods.Any()
+
+select new { t, forbiddenMethods }
+
+]]></Query>
+  <Query Active="True" DisplayList="True" DisplayStat="False" DisplaySelectionView="False" IsCriticalRule="False"><![CDATA[// <Name>Namensmuster Parser</Name>
+warnif count > 0 
+
+let patternName = "Parser"
+let allowedMethods = new string[]{}
+let allowedPrefixes = new string[]{"ParseFrom"}
+
+let classBlacklist = new string[]{
+ "Program"
+}
+
+let patternClasses = JustMyCode.Types.Where(t => !t.IsGeneratedByCompiler)
+                                        .Where(t => !t.IsStatic)
+                                        .Where(t => !t.ParentNamespace.FullName.Contains("DataClasses"))
+                                        .Where(t => !classBlacklist.Any(cbl => cbl == t.SimpleName))
+                                        .Where(t => t.SimpleName.EndsWith(patternName))
+
+from t in patternClasses 
+
+let forbiddenMethods = t.Methods.Where(m => !allowedMethods.Any(am => m.SimpleName == am))
+                                .Where(m => !allowedPrefixes.Any(ap => m.SimpleName.StartsWith(ap)))
+
+where forbiddenMethods.Any()
+
+select new { t, forbiddenMethods }
+
+
+]]></Query>
+  <Query Active="True" DisplayList="True" DisplayStat="False" DisplaySelectionView="False" IsCriticalRule="False"><![CDATA[// <Name>Namensmuster Reader</Name>
+warnif count > 0 
+
+let patternName = "Reader"
+let allowedMethods = new string[]{}
+let allowedPrefixes = new string[]{"Read"}
+
+let classBlacklist = new string[]{
+ "Program"
+}
+
+let patternClasses = JustMyCode.Types.Where(t => !t.IsGeneratedByCompiler)
+                                        .Where(t => !t.IsStatic)
+                                        .Where(t => !t.ParentNamespace.FullName.Contains("DataClasses"))
+                                        .Where(t => !classBlacklist.Any(cbl => cbl == t.SimpleName))
+                                        .Where(t => t.SimpleName.EndsWith(patternName))
+
+from t in patternClasses 
+
+let forbiddenMethods = t.Methods.Where(m => !allowedMethods.Any(am => m.SimpleName == am))
+                                .Where(m => !allowedPrefixes.Any(ap => m.SimpleName.StartsWith(ap)))
+
+where forbiddenMethods.Any()
+
+select new { t, forbiddenMethods }
+
+
+]]></Query>
+  <Query Active="True" DisplayList="True" DisplayStat="False" DisplaySelectionView="False" IsCriticalRule="False"><![CDATA[// <Name>Namensmuster DisplayCommands</Name>
+warnif count > 0 
+
+let patternName = "DisplayCommands"
+let allowedMethods = new string[]{}
+let allowedPrefixes = new string[]{"Display"}
+
+let classBlacklist = new string[]{
+ "Program"
+}
+
+let patternClasses = JustMyCode.Types.Where(t => !t.IsGeneratedByCompiler)
+                                        .Where(t => !t.IsStatic)
+                                        .Where(t => !t.ParentNamespace.FullName.Contains("DataClasses"))
+                                        .Where(t => !classBlacklist.Any(cbl => cbl == t.SimpleName))
+                                        .Where(t => t.SimpleName.EndsWith(patternName))
+
+from t in patternClasses 
+
+let forbiddenMethods = t.Methods.Where(m => !allowedMethods.Any(am => m.SimpleName == am))
+                                .Where(m => !allowedPrefixes.Any(ap => m.SimpleName.StartsWith(ap)))
+
+where forbiddenMethods.Any()
+
+select new { t, forbiddenMethods }
+
+
+]]></Query>
+  <Query Active="True" DisplayList="True" DisplayStat="False" DisplaySelectionView="False" IsCriticalRule="False"><![CDATA[// <Name>Alle Klassen die keinem Namensmuster folgen</Name>
+warnif count > 0 
+
+let classBlacklist = new string[]
+{
+ "Program"
+}
+
+let patternList = new string[]
+{
+ "DisplayCommands",
+ "Manager",
+ "Repository",
+ "Reader",
+ "Parser"
+}
+
+let managementClasses = JustMyCode.Types.Where(t => !t.IsGeneratedByCompiler)
+                                        .Where(t => !t.IsStatic)
+                                        .Where(t => !t.ParentNamespace.FullName.Contains("DataClasses"))
+                                        .Where(t => !classBlacklist.Any(cbl => cbl == t.SimpleName))
+
+from t in managementClasses
+
+where !patternList.Any(t1 =>t.SimpleName.EndsWith(t1)) 
+
+select new { t, t.Methods }
+]]></Query>
+</Queries>

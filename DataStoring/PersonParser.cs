@@ -1,8 +1,10 @@
-﻿namespace ConsoleClient;
+﻿using DavidTielke.PMA.CrossCutting.DataClasses;
+
+namespace DavidTielke.PMA.Data.DataStoring;
 
 public class PersonParser
 {
-    public Person Parse(string dataLine)
+    public Person ParseFromCsv(string dataLine)
     {
         var parts = dataLine.Split(",");
         var person = new Person

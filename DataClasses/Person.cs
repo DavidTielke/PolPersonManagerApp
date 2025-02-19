@@ -1,4 +1,4 @@
-﻿namespace ConsoleClient;
+﻿namespace DavidTielke.PMA.CrossCutting.DataClasses;
 
 public class Person
 {

@@ -3,7 +3,31 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34316.72
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleClient", "ConsoleClient\ConsoleClient.csproj", "{5826DE8C-4C72-4A71-9A27-18AB2AE969B3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleClient", "ConsoleClient\ConsoleClient.csproj", "{5826DE8C-4C72-4A71-9A27-18AB2AE969B3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{15BFC90D-A973-4ED0-8160-D5B175844A22}"
+	ProjectSection(SolutionItems) = preProject
+		Polipol Rules.ndrules = Polipol Rules.ndrules
+		Polipol_Alanysis.ndproj = Polipol_Alanysis.ndproj
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UI", "UI", "{D663624B-1ADB-42BA-88C2-E731F2F16709}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Logic", "Logic", "{78630AF4-B2B4-4A39-A799-908FF69D7C42}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{804161BC-A10A-49F9-ACB4-19D713909206}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CrossCutting", "CrossCutting", "{9347B540-3972-44F4-9C49-5432F1F68943}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataClasses", "DataClasses\DataClasses.csproj", "{594C79AD-3A7D-445B-8F50-D8D883AC0E2E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataStoring", "DataStoring\DataStoring.csproj", "{3C0BD75F-0092-49E8-987F-25D015406F0D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileStoring", "FileStoring\FileStoring.csproj", "{2D1A417F-1E5F-4958-A14D-222BFBE749A6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PersonManagement", "PersonManagement\PersonManagement.csproj", "{9033297E-3E92-4C34-B071-23997C35C554}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceClient", "ServiceClient\ServiceClient.csproj", "{A42A3DE1-4A0E-40C2-A5D4-204C760156FE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,9 +39,37 @@ Global
 		{5826DE8C-4C72-4A71-9A27-18AB2AE969B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5826DE8C-4C72-4A71-9A27-18AB2AE969B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5826DE8C-4C72-4A71-9A27-18AB2AE969B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{594C79AD-3A7D-445B-8F50-D8D883AC0E2E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{594C79AD-3A7D-445B-8F50-D8D883AC0E2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{594C79AD-3A7D-445B-8F50-D8D883AC0E2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{594C79AD-3A7D-445B-8F50-D8D883AC0E2E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C0BD75F-0092-49E8-987F-25D015406F0D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C0BD75F-0092-49E8-987F-25D015406F0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C0BD75F-0092-49E8-987F-25D015406F0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C0BD75F-0092-49E8-987F-25D015406F0D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2D1A417F-1E5F-4958-A14D-222BFBE749A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D1A417F-1E5F-4958-A14D-222BFBE749A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D1A417F-1E5F-4958-A14D-222BFBE749A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D1A417F-1E5F-4958-A14D-222BFBE749A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9033297E-3E92-4C34-B071-23997C35C554}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9033297E-3E92-4C34-B071-23997C35C554}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9033297E-3E92-4C34-B071-23997C35C554}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9033297E-3E92-4C34-B071-23997C35C554}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A42A3DE1-4A0E-40C2-A5D4-204C760156FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A42A3DE1-4A0E-40C2-A5D4-204C760156FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A42A3DE1-4A0E-40C2-A5D4-204C760156FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A42A3DE1-4A0E-40C2-A5D4-204C760156FE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{5826DE8C-4C72-4A71-9A27-18AB2AE969B3} = {D663624B-1ADB-42BA-88C2-E731F2F16709}
+		{594C79AD-3A7D-445B-8F50-D8D883AC0E2E} = {9347B540-3972-44F4-9C49-5432F1F68943}
+		{3C0BD75F-0092-49E8-987F-25D015406F0D} = {804161BC-A10A-49F9-ACB4-19D713909206}
+		{2D1A417F-1E5F-4958-A14D-222BFBE749A6} = {804161BC-A10A-49F9-ACB4-19D713909206}
+		{9033297E-3E92-4C34-B071-23997C35C554} = {78630AF4-B2B4-4A39-A799-908FF69D7C42}
+		{A42A3DE1-4A0E-40C2-A5D4-204C760156FE} = {D663624B-1ADB-42BA-88C2-E731F2F16709}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4B525379-65B9-47D6-9593-204DA116A3C1}

@@ -1,4 +1,7 @@
-﻿namespace ConsoleClient;
+﻿using DavidTielke.PMA.CrossCutting.DataClasses;
+using DavidTielke.PMA.Data.FileStoring;
+
+namespace DavidTielke.PMA.Data.DataStoring;
 
 public class PersonRepository
 {
@@ -14,7 +17,7 @@ public class PersonRepository
     public IQueryable<Person> Query()
     {
         var lines = _reader.ReadLines("data.csv");
-        var persons = lines.Select(_parser.Parse);
+        var persons = lines.Select(_parser.ParseFromCsv);
         return persons.AsQueryable();
     }
 }

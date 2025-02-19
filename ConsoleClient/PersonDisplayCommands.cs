@@ -1,4 +1,6 @@
-﻿namespace ConsoleClient;
+﻿using DavidTielke.PMA.Logic.PersonManagement;
+
+namespace DavidTielke.PMA.UI.ConsoleClient;
 
 public class PersonDisplayCommands
 {
@@ -8,6 +10,11 @@ public class PersonDisplayCommands
     {
         _manager = new PersonManager();
     }
+
+    // Alle Methoden die wir geschrieben haben
+    // mehr als 20 LOC
+    // oder mehr als 5 Parametern
+    // oder mehr als 7 Cyclomatische Komplexität
     public void DisplayAllAdults()
     {
         var adults = _manager.GetAllAdults().ToList();
