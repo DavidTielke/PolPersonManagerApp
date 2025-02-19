@@ -19,15 +19,19 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{804161BC-A
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CrossCutting", "CrossCutting", "{9347B540-3972-44F4-9C49-5432F1F68943}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataClasses", "DataClasses\DataClasses.csproj", "{594C79AD-3A7D-445B-8F50-D8D883AC0E2E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataClasses", "DataClasses\DataClasses.csproj", "{594C79AD-3A7D-445B-8F50-D8D883AC0E2E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataStoring", "DataStoring\DataStoring.csproj", "{3C0BD75F-0092-49E8-987F-25D015406F0D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataStoring", "DataStoring\DataStoring.csproj", "{3C0BD75F-0092-49E8-987F-25D015406F0D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileStoring", "FileStoring\FileStoring.csproj", "{2D1A417F-1E5F-4958-A14D-222BFBE749A6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FileStoring", "FileStoring\FileStoring.csproj", "{2D1A417F-1E5F-4958-A14D-222BFBE749A6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PersonManagement", "PersonManagement\PersonManagement.csproj", "{9033297E-3E92-4C34-B071-23997C35C554}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PersonManagement", "PersonManagement\PersonManagement.csproj", "{9033297E-3E92-4C34-B071-23997C35C554}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceClient", "ServiceClient\ServiceClient.csproj", "{A42A3DE1-4A0E-40C2-A5D4-204C760156FE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServiceClient", "ServiceClient\ServiceClient.csproj", "{A42A3DE1-4A0E-40C2-A5D4-204C760156FE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{79B85F60-612D-42BE-A291-739F33B7CA8F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mappings", "Mappings\Mappings.csproj", "{5800C692-6C50-4D97-8AAE-4805166929DF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -59,6 +63,10 @@ Global
 		{A42A3DE1-4A0E-40C2-A5D4-204C760156FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A42A3DE1-4A0E-40C2-A5D4-204C760156FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A42A3DE1-4A0E-40C2-A5D4-204C760156FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5800C692-6C50-4D97-8AAE-4805166929DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5800C692-6C50-4D97-8AAE-4805166929DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5800C692-6C50-4D97-8AAE-4805166929DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5800C692-6C50-4D97-8AAE-4805166929DF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -70,6 +78,7 @@ Global
 		{2D1A417F-1E5F-4958-A14D-222BFBE749A6} = {804161BC-A10A-49F9-ACB4-19D713909206}
 		{9033297E-3E92-4C34-B071-23997C35C554} = {78630AF4-B2B4-4A39-A799-908FF69D7C42}
 		{A42A3DE1-4A0E-40C2-A5D4-204C760156FE} = {D663624B-1ADB-42BA-88C2-E731F2F16709}
+		{5800C692-6C50-4D97-8AAE-4805166929DF} = {79B85F60-612D-42BE-A291-739F33B7CA8F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4B525379-65B9-47D6-9593-204DA116A3C1}

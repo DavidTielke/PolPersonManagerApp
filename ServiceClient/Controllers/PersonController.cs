@@ -10,9 +10,9 @@ namespace ServiceClient.Controllers
     {
         private readonly PersonManager _manager;
 
-        public PersonController()
+        public PersonController(PersonManager manager)
         {
-            _manager = new PersonManager();
+            _manager = manager;
         }
 
         [HttpGet()]

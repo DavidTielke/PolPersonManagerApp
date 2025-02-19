@@ -2,19 +2,15 @@
 
 namespace DavidTielke.PMA.UI.ConsoleClient;
 
-public class PersonDisplayCommands
+public class PersonDisplayCommands : IPersonDisplayCommands
 {
-    private readonly PersonManager _manager;
+    private readonly IPersonManager _manager;
 
-    public PersonDisplayCommands()
+    public PersonDisplayCommands(IPersonManager manager)
     {
-        _manager = new PersonManager();
+        _manager = manager;
     }
 
-    // Alle Methoden die wir geschrieben haben
-    // mehr als 20 LOC
-    // oder mehr als 5 Parametern
-    // oder mehr als 7 Cyclomatische Komplexität
     public void DisplayAllAdults()
     {
         var adults = _manager.GetAllAdults().ToList();
